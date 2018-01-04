@@ -12,7 +12,7 @@ node('master'){
     stage('build'){
         try{
 		
-		} catch {
+		} catch (e){
 		//slackSend message: color: 'danger'
 		}
     }
@@ -20,7 +20,7 @@ node('master'){
     stage('analyze'){
         try{
 		
-		} catch {
+		} catch (e){
 		//slackSend message: color: 'danger'
 		}
     }
