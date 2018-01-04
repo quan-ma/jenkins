@@ -1,0 +1,38 @@
+node('master'){
+    stage('import'){
+        git 'https://github.com/quan-ma/jenkins.git'
+        try{
+		
+		} catch {
+		//slackSend message:{env.BUILD_NUMBER} color: 'danger'
+		}
+    }   
+    
+    stage('build'){
+        try{
+		
+		} catch {
+		//slackSend message: color: 'danger'
+		}
+    }
+    
+    stage('analyze'){
+        try{
+		
+		} catch {
+		//slackSend message: color: 'danger'
+		}
+    }
+
+	stage('test'){
+	
+	}
+    
+    stage('package'){
+        
+    }
+    
+    stage('deploy'){
+        
+    }
+}
