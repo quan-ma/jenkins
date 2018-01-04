@@ -2,7 +2,7 @@ node('master'){
     stage('import'){
         try{
 		git 'https://github.com/quan-ma/jenkins.git'
-		} catch {
+		} catch (e) {
 		//slackSend message:{env.BUILD_NUMBER} color: 'danger'
 
 		throw error
