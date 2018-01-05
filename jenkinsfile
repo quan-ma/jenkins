@@ -11,7 +11,11 @@ node('master'){
     
     stage('build'){
         try{
-		
+			dir('Jenkinz'){
+				bat 'dotnet restore'
+				bat 'msbuild /t:clean,build Jenkinz.csproj'
+			}
+
 		} catch (e){
 		//slackSend message: color: 'danger'
 		}
@@ -19,7 +23,9 @@ node('master'){
     
     stage('analyze'){
         try{
-		
+			dir('Jenkinz'){
+				
+			}
 		} catch (e){
 		//slackSend message: color: 'danger'
 		}
