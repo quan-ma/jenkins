@@ -37,6 +37,14 @@ node('master'){
     
     stage('package'){
         
+		try{
+			dir('Jenkinz'){
+				bat 'msbuild /t:package Jenkinz.csproj'
+			}
+		} catch (e){
+			//slackSend message: color: 'danger'
+		}
+
     }
     
     stage('deploy'){
