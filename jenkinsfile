@@ -39,7 +39,7 @@ node('master'){
         
 		try{
 			dir('Jenkinz'){
-				bat 'msbuild /t:package Jenkinz.csproj'
+				bat 'msbuild /t:pack Jenkinz.csproj'
 			}
 		} catch (e){
 			//slackSend message: color: 'danger'
